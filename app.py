@@ -20,3 +20,7 @@ if mode=='Generate questions':
 elif mode=='Generate code':
   topic=st.selectbox('Topics',['SQL','AIML','PYTHON','DSA','C++','C','JAVA','HTML'])
   count=st.slider("Number of questions",1,10,5)
+else:
+  question=st.text_area('Enter question here')
+  answer=st.text_area('Enter your answer',height=160)
+  
