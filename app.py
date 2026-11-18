@@ -14,5 +14,6 @@ if role=='Other':
   st.text_input('Enter your Job Title', 'XXXXXXX')
 model=st.selectbox('Model',['openai/gpt-oss-20b','openai/gpt-oss-120b'])
 level=st.selectbox('Difficulty level',['Beginner','Intermediate','Advanced'])
+mode=st.radio('Activity',['Generate questions','Evaluate answers','Improve the answers','Generate code'])
 
 
