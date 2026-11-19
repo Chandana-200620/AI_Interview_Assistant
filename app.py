@@ -50,14 +50,14 @@ if st.button('Generate AI Response', type='primary'):
           temperature=0.7,
           max_tokens=1800
         )
-       output=response.choices[0].message.content
-       st.subheader('AI RESPONSE')
-       st.markdown(output)
-       st.download_button('Download Response', output, file_name='Interview Response.txt',mime='text/plain')
+        output=response.choices[0].message.content
+        st.subheader('AI RESPONSE')
+        st.markdown(output)
+        st.download_button('Download Response', output, file_name='Interview Response.txt',mime='text/plain')
       except Exception as e:
         st.error ("API connection was unsuccessfull!")
         st.info("Please check your API key and rate limits")
-      
+  st.caption('Powered by Streamlit.io and GitHub using LLM API')
       
 
   
