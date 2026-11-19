@@ -56,7 +56,7 @@ if btn:
 
     elif mode == "Improve the Answers":
         task = "Question: " + question + "\nMy answer is: " + answer + "\nImprove this answer based on choice of words, keywords and professional communication."
-
+ 
     bg = "Job role: " + role + "\nDifficulty level: " + level
 
     with st.spinner("Generating your answers....!"):
@@ -82,6 +82,6 @@ if btn:
         except Exception as e:
             st.error(f"API Connection was unsuccessful: {e}")
             st.info("Please check your API key and rate limits")
-            st.caption("Powered by Streamlit.io and GitHub using LLM API")
+ st.caption("Powered by Streamlit.io and GitHub using LLM API")
 
             
