@@ -78,7 +78,7 @@ if btn:
 
             st.download_button("Download Response", output, file_name="Interview_Response.txt", mime="text/plain")
 
-            st.success("Response generated successfully!")
+            #st.success("Response generated successfully!")
 
         except Exception as e:
             st.error(f"API Connection was unsuccessful: {e}")
