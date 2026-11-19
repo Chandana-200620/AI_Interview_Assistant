@@ -47,7 +47,7 @@ if st.button('Generate AI Response', type='primary'):
                     {'role':'user',
                      'content':background+task}
                    ],
-          temperature:0.7,
+          temperature=0.7,
           max_tokens=1800
         )
       except Exception as e:
