@@ -52,7 +52,7 @@ if st.button('Generate AI Response', type='primary'):
         )
       except Exception as e:
         st.error ("API connection was unsuccessfull!")
-        st.info("Please check your API key and rate limits')
+        st.info("Please check your API key and rate limits")
       
       
 
