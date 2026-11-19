@@ -82,6 +82,6 @@ if btn:
         except Exception as e:
             st.error(f"API Connection was unsuccessful: {e}")
             st.info("Please check your API key and rate limits")
- st.caption("Powered by Streamlit.io and GitHub using LLM API")
+            st.caption("Powered by Streamlit.io and GitHub using LLM API")
 
             
