@@ -9,7 +9,7 @@ try:
   client=Groq(api_key=st.secrets['GROQ_API_KEY'])
 except(KeyError,FileNotFoundError):
   st.error("API key is missing. Add it on advanced settings")
-  st.stop
+  st.stop()
 role=st.selectbox('Job Title', ['Machine learning Engineer', 'Data Analyst', 'Developer', 'Senior Manager','HR','Other'])
 if role=='Other':
   st.text_input('Enter your Job Title', 'XXXXXXX')
@@ -24,4 +24,6 @@ elif mode=='Generate code':
 else:
   question=st.text_area('Enter question here')
   answer=st.text_area('Enter your answer',height=160)
+if st.button('Generate AI Response', type='primary'):
+  st.warning('Please enter question and answer')
   
