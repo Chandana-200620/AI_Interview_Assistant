@@ -37,7 +37,7 @@ if st.button('Generate AI Response', type='primary'):
     task='Question: ' + question + ' My answer: ' + answer + ' Evaluate this based on concepts,relevance and communication. Give the rating for each answer.'
   elif mode=='Improve the answers':
     task='Question ' + question + ' My answer: ' + answer + ' Improve the answer by considering accuracy,length of words used for better explaination, choice of words.'
-  background= 'Job role: ' +role+'Difficulty level: '+level
+  background= 'Job role: ' + role +'Difficulty level: ' + level
   with st.spinner('Generating your answer.....'):
       try:
         esponses=client.chat.completions.create(
@@ -50,6 +50,9 @@ if st.button('Generate AI Response', type='primary'):
           temperature=0.7,
           max_tokens=1800
         )
+          output=response.choices[0].message.content
+          st.subheader('AI RESPONSE')
+          st.markdown(output)
       except Exception as e:
         st.error ("API connection was unsuccessfull!")
         st.info("Please check your API key and rate limits")
